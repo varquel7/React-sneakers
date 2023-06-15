@@ -1,9 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+
 body {
   margin: 0;
-  font-family: system-ui;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #e7f6ff;
+}
+
+* {
+  font-family: 'Inter', system-ui;
 }
 
 .wrapper{
@@ -12,7 +17,17 @@ body {
   border-radius: 40px;
   max-width: 1080px;
   margin: 50px auto;
-}
+
+
+  .headerRight {
+    display: flex;
+    gap: 15px;
+
+    > li {
+      list-style: none;
+      margin-right: 30px;
+    }
+        }
 .logo{
   height: 70px;
 }
@@ -21,26 +36,228 @@ header{
   justify-content: space-between;
   padding: 40px;
   border-bottom: 1px solid #eaeaea;
+  align-items: center;
 
   .headerLeft {
     display: flex;
     align-items: center;
 
-    .headerRight {
-display: flex;
-gap: 15px;
-    }
-
     img{
 margin-right: 15px;
     }
-
     
     h3,
     p {
       margin: 0;
     }
+p {
+  opacity: 0.5;
+}
+  
+  }
+}
+}
+.card{
+  border: 1px solid #f3f3f3;
+  padding: 20px;
+  width: 220px;
+  border-radius: 40px;
+  margin-right: 8px;
+  transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+  cursor: pointer;
+
+
+  &:hover {
+    box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.06);
+    transform: translateY(-5px);
+  }
+
+.unliked_logo {
+  position: absolute;
+  cursor: pointer;
+}
+
+ span {
+  font-size: 13px;
+  opacity: 0.5;
+  text-transform: uppercase;
+ }
+
+ b {
+  font-size: 13px;
+ }
+
+  h5{
+    font-weight: 400;
+    font-size: 14px;
   }
 }
 
+ .cardBottom{
+  display: flex;
+  justify-content: space-between;
+}
+.cardBotttom{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.button {
+  background: #ffff;
+  border: 1px solid #f2f2f2;
+  box-sizing: border-box;
+  border-radius: 8px;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+}
+.title2 {
+  // margin-bottom: 50px;
+  margin-left: 15px;
+  opacity: 0.8;
+}
+
+.sneakers{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Search{
+display: flex;
+align-items: center;
+margin-bottom: 50px;
+justify-content: space-between;
+
+}
+
+
+.search-block {
+  border: 1px solid #f3f3f3;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  padding: 0 15px;
+
+
+  input {
+    border: 0;
+    padding: 13px;
+    font-size: 16px;
+    width: 200px;
+  }
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+  z-index: 1;
+}
+
+.drawer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 420px;
+  height: 100%;
+  right: 0;
+  background: #ffffff;
+  box-shadow: -10px 4px 24px rgba (0, 0, 0, 0.1);
+  padding: 30px;
+
+
+  h2 {
+    margin-top: 30px;
+  }
+
+p {
+  margin-bottom: 5px;
+}
+  .cartItem {
+    display: flex;
+    align-items: center;
+  }
+
+  .cartSneakers {
+    margin-right: 20px;
+  
+  }
+
+  .remove {
+   display: block;
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 8px;
+    padding: 5px;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.15s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+
+.cartItem {
+  border: 1px solid #f3f3f3;
+  border-radius: 20px;
+  overflow: hidden;
+  p {
+    font-size: 16px;
+  }
+b {
+  font-size: 14px;
+}
+}
+.items{
+  flex: 1;
+  .cart-block {
+    margin-right: 20px;
+    
+  }
+
+margin-top: 100%;
+  li{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 20px;
+  
+   
+  }
+  ul{
+
+    div{
+      flex: 1;
+      height: 1px;
+      border-bottom: 1px dashed #dfdfdf;
+      position: relative;
+      top: -4px;
+      margin: 0 7px;
+    }
+  }
+}
+}
+.Checkout{
+  width: 100%;
+  height: 55px;
+  background: #9DD558;
+  border-radius: 18px;
+  border: 0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.1s ease-in-out;
+
+  &:hover {
+    background: lighten(#9dd558, 5%);
+  }
+
+  &:active {
+    background: darken(#9dd558, 5%);
+  }
+}
